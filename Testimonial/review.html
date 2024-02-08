@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educational Website - Reviews</title>
+    <link rel="stylesheet" href="review.css">
+</head>
+<body>
+    
+<body background="Bkg.jpg">
+
+    <nav>
+        <div class="logo">
+            <img src="/HomeLogo.png" alt="Logo">
+        </div>
+        <h1>Learnify</h1>
+        <ul id="nav-menu">  
+            <li><a href="\home\home.html">Home</a></li>
+            <li><a href="\Demo\demo.html">Demo</a></li>
+            <li><a href="\Testimonial\review.html"> Testimonials</a></li>
+            <li class="dropdown" onmouseover="showDropdown()">
+                <a href="#" class="dropbtn" onmouseleave="hideDropdown()">About Us</a>
+                <div class="dropdown-content" onmouseleave="hideDropdown()">
+                    <a href="\skill\skill.html">Skills</a>
+                    <a href="\Achievements\Achivments.html">Achievements</a>
+                </div>
+            </li>
+            <li><a href="\contact\contact.html">Contact</a></li>
+        </ul>
+        <button class="signup-button" onclick="showLoginPopup()">Sign Up</button>
+
+        <ul id="nav-menu-btn">
+            <li><button id="menu-btn"><img src="\menu.png" alt="menu"  class="menu-open-btn"></button></li>
+        </ul>
+
+        <ul id="nav-menu-mobile">
+            <ul id="nav-menu-btn" class="menu-close-btn">
+                <li><button id="menu-close-btn">X</button></li>
+            </ul>
+            <div class="logo-mobile">
+                <img src="https://th.bing.com/th/id/OIG.bP0PjaSMKoFfpf2rxhc.?pid=ImgGn" alt="Logo">
+                <h1 style="display: inline-block;color: black;">Learnify</h1>
+            </div>
+            <li><a href="\home\home.html">Home</a></li>
+            <li><a href="\Demo\demo.html">Demo</a></li>
+            <li><a href="\Testimonial\review.html"> Testimonials</a></li>
+            <li class="dropdown" onmouseover="showDropdown()">
+                <a href="#" class="dropbtn" onmouseleave="hideDropdown()">About Us</a>
+                <div class="dropdown-content-mobile" onmouseleave="hideDropdown()">
+                    <a href="\skill\skill.html">Skills</a>
+                    <a href="\Achievements\Achivments.html">Achievements</a>
+                </div>
+            </li>
+            <li><a href="\contact\contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- <header>
+        <h1>Student Reviews</h1>
+    </header> -->
+
+    <div class="review-container" id="reviewContainer">
+        <!-- Reviews will be dynamically added here -->
+    </div>
+
+    <div id="reviewForm">
+        <h2>Submit a Review</h2>
+        <form id="submitReviewForm">
+            <label for="reviewTitle">Title:</label>
+            <input type="text" id="reviewTitle" name="reviewTitle" required>
+            <label for="reviewContent">Review:</label>
+            <textarea id="reviewContent" name="reviewContent" rows="4" required></textarea>
+            <label for="reviewRating">Rating:</label>
+            <input type="number" id="reviewRating" name="reviewRating" min="1" max="5" required>
+            <button type="submit">Submit Review</button>
+        </form>
+    </div>
+
+    <div class="footer">
+        <div class="social-media">
+            <a href="#" target="_blank"><img src="/FB.png" alt="Facebook"></a>
+            <a href="#" target="_blank"><img src="/Twitter.jpg" alt="Twitter"></a>
+            <a href="#" target="_blank"><img src="/Linkedin.jpg" alt="LinkedIn"></a>
+        </div>
+        <div class="footer-links">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Courses</a></li>
+                <li><a href="#">Popular Exams</a></li>
+                <li><a href="#">Classes</a></li>
+            </ul>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 Learnify</p>
+        </div>
+    </div>
+    
+    <script src="review.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physics Tutor Contacts</title>
+    <!-- Include FontAwesome CSS for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="contact.css">
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <img src="/HomeLogo.png" alt="Logo">
+        </div>
+        <h1>Learnify</h1>
+        <ul id="nav-menu">  
+            <li><a href="\home\home.html">Home</a></li>
+            <li><a href="\Demo\demo.html">Demo</a></li>
+            <li><a href="\Testimonial\review.html"> Testimonials</a></li>
+            <li class="dropdown" onmouseover="showDropdown()">
+                <a href="#" class="dropbtn" onmouseleave="hideDropdown()">About Us</a>
+                <div class="dropdown-content" onmouseleave="hideDropdown()">
+                    <a href="\skill\skill.html">Skills</a>
+                    <a href="\Achievements\Achivments.html">Achievements</a>
+                </div>
+            </li>
+            <li><a href="\contact\contact.html">Contact</a></li>
+        </ul>
+        <button class="signup-button" onclick="showLoginPopup()">Sign Up</button>
+
+        <ul id="nav-menu-btn">
+            <li><button id="menu-btn"><img src="\menu.png" alt="menu"  class="menu-open-btn"></button></li>
+        </ul>
+
+        <ul id="nav-menu-mobile">
+            <ul id="nav-menu-btn" class="menu-close-btn">
+                <li><button id="menu-close-btn">X</button></li>
+            </ul>
+            <div class="logo-mobile">
+                <img src="https://th.bing.com/th/id/OIG.bP0PjaSMKoFfpf2rxhc.?pid=ImgGn" alt="Logo">
+                <h1 style="display: inline-block;color: black;">Learnify</h1>
+            </div>
+            <li><a href="\home\home.html">Home</a></li>
+            <li><a href="\Demo\demo.html">Demo</a></li>
+            <li><a href="\Testimonial\review.html"> Testimonials</a></li>
+            <li class="dropdown" onmouseover="showDropdown()">
+                <a href="#" class="dropbtn" onmouseleave="hideDropdown()">About Us</a>
+                <div class="dropdown-content-mobile" onmouseleave="hideDropdown()">
+                    <a href="\skill\skill.html">Skills</a>
+                    <a href="\Achievements\Achivments.html">Achievements</a>
+                </div>
+            </li>
+            <li><a href="\contact\contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <div id="AAA">
+        <div class="container"">
+
+            <section>
+                <div>
+                    <div class="scrolling-text-container">
+                        <p class="scrolling-text">CONTACT ME HERE IF WILLING TO WORK WITH ME AT ANY LEVEL.</p>
+                    </div>
+                </div>
+            </section>
+            <div class="flex-container">
+                <div class="flex-section">
+                    <img src="contact.jpg" alt="Tutor" class="profile-image">
+                </div>
+
+                <div class="flex-section">
+                    <section id="AA">
+
+                        <h2>Contact Information</h2>
+                        <p class="contact-info">
+                            <span class="contact-icon">📍</span> Office Address: 123 Main Street, Cityville<br>
+                            <span class="contact-icon">✉</span> Email: <a class="contact-link"
+                                href="mailto:your.email@example.com">your.email@example.com</a><br>
+                            <span class="social-icon fab fa-linkedin"></span> LinkedIn: <a class="social-link"
+                                href="https://www.linkedin.com/in/your-linkedin-id" target="_blank">LinkedIn
+                                Profile</a><br>
+                            <span class="social-icon fab fa-whatsapp"></span> WhatsApp: <a class="social-link"
+                                href="tel:+1234567890">+1234567890</a><br>
+                            <span class="social-icon fab fa-instagram"></span> Instagram: <a class="social-link"
+                                href="https://www.instagram.com/your-instagram-id" target="_blank">Instagram
+                                Profile</a><br>
+                            <span class="social-icon fab fa-facebook"></span> Facebook: <a class="social-link"
+                                href="https://www.facebook.com/your-facebook-id" target="_blank">Facebook
+                                Profile</a><br>
+                            <span class="social-icon fab fa-twitter"></span> Twitter: <a class="social-link"
+                                href="https://twitter.com/your-twitter-id" target="_blank">Twitter Profile</a>
+                        </p>
+                    </section>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <title>SVNIT Surat Office Location</title>
+    <section id="office-location">
+        <h2 id="off">Office Location:</h2>
+        <div>
+            <!-- <a href="https://maps.app.goo.gl/JF17kML5csgPgAAx7"><img src="Map.png" alt=""></a> -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3720.529352072941!2d72.76784151979066!3d21.17112044060001!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04dec8b56fdf3%3A0x423b99085d26d1f9!2sSardar%20Vallabhbhai%20National%20Institute%20of%20Technology%2C%20SVNIT.!5e0!3m2!1sen!2sin!4v1704723556930!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" id="map"></iframe>
+        </div>
+    </section>
+
+    <script src="contact.js"></script>
+</body>
+
+</html>

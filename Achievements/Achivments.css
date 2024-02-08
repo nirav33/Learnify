@@ -1,0 +1,478 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('HomeBG.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #0a0a0aac;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+
+h1 {
+    font-size: 36px;
+}
+
+p {
+    font-size: 18px;
+}
+
+
+nav {
+    background-color: #007BFF;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 10px 3px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+
+
+.logo img {
+    width: 45px;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 5px;
+    margin-right: 10px;
+}
+
+.logo-mobile img {
+    width: 40px;
+    height: auto;
+    border-radius: 10px;
+    margin-right: 12px;
+}
+
+.logo-mobile {
+    position: absolute;
+    top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+nav h1 {
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 600;
+    margin: 0;
+    letter-spacing: 2.5px;
+    color: #fff;
+    transition: transform 0.6s;
+    cursor: pointer;
+}
+
+nav h1:hover {
+    transform: scale(1.2);
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav li {
+    margin: 0;
+    position: relative;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+nav li:hover {
+    transform: scale(1.05);
+}
+
+strong {
+    color: #ffcc00;
+    text-decoration: underline;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 10px 20px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    /* Added background-color transition */
+    position: relative;
+}
+
+nav a:hover {
+    color: #ffc107;
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Change the background color on hover */
+}
+
+nav a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #ffc107;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-in-out;
+}
+
+nav a:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+#nav-menu-btn {
+    display: none;
+}
+
+#nav-menu-mobile {
+    z-index: 1;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0vw;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    gap: 25px;
+    background-color: rgb(255, 255, 255);
+}
+
+#nav-menu-mobile a {
+    font-size: 30px;
+}
+
+#nav-menu-mobile a {
+    color: black;
+}
+
+.menu-close-btn {
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    font-size: 25px;
+    color: black;
+    font-weight: 600;
+}
+
+.signup-button {
+    background-color: #fff;
+    color: #007BFF;
+    border: none;
+    padding: auto;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.signup-button:hover {
+    background-color: #FF9800;
+    transform: scale(1.1);
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.close-btn {
+    background-color: #fff;
+    padding: 8px;
+    margin: 2px;
+    border-radius: 10%;
+    position: absolute;
+    font-weight: bold;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    color: #555;
+}
+
+.close-btn:hover {
+    background-color: #FF9800;
+}
+
+
+.popup-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+form {
+    display: grid;
+    gap: 15px;
+}
+
+label {
+    font-weight: bold;
+    color: #333;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    min-width: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 10px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown-content-mobile {
+    display: none;
+    position: relative;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    min-width: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    left: 0;
+}
+.dropdown-content-mobile a {
+    color: black;
+    padding: 12px 10px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content-mobile a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content-mobile {
+    display: block;
+}
+
+
+main {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+}
+
+
+section {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    background-color: #fff;
+    z-index: -1 ;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    width: 90%;
+}
+
+h2 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 50px;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 30px;
+    color: #0e6b87;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+    padding: 5px;
+    text-align: left;
+    margin-top: 60px;
+}
+
+li {
+    margin-bottom: 10px;
+    line-height: 2.3;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 22px;
+    position: relative;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+li:hover {
+    transform: scale(1.05);
+}
+
+strong {
+    color: #ffcc00;
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    padding: 5px;
+    margin: 20px;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #007bff;
+    color: #fff;
+    width: 95%;
+    border-radius: 8px;
+    height: 60px;
+}
+
+img {
+    width: 45%;
+    /* border-radius: 50%; */
+    margin-left: 5px;
+    margin-top: 20px;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+img:hover {
+    transform: scale(1.1);
+}
+
+
+
+@media screen and (max-width: 1000px) {
+    #nav-menu {
+        display: none;
+    }
+
+    #nav-menu-btn {
+        display: inline;
+    }
+
+    nav h1{
+        font-size: 26px;
+    }
+    header {
+
+        font-size: 12px;
+        text-align: center;
+    }
+    /* section {
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    ul {
+        margin-top: 20px;
+    }
+
+    img {
+        /* width: 80%; */
+        /* margin: 20px 0;
+    } */
+
+    li {
+        font-size: 10px;
+    } 
+    .menu-open-btn{
+        margin-left: 5px;
+        margin-top: 4px;
+        width: 20px;
+        height: 20px;
+    }
+    .signup-button{
+        width: 3rem;
+        justify-content: center ;
+        margin-left: 5px;
+        font-size: 12px;
+        height: auto;
+        border-radius: 40%;
+    }
+
+    footer {
+        font-size: 16px;
+        height: auto;
+    }
+}

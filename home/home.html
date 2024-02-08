@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learnify</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+
+<body background="Bkg.jpg">
+
+    <nav>
+        <div class="logo">
+            <img src="/HomeLogo.png" alt="Logo">
+        </div>
+        <h1>Learnify</h1>
+        <ul id="nav-menu">  
+            <li><a href="\home\home.html">Home</a></li>
+            <li><a href="\Demo\demo.html">Demo</a></li>
+            <li><a href="\Testimonial\review.html"> Testimonials</a></li>
+            <li class="dropdown" onmouseover="showDropdown()">
+                <a href="#" class="dropbtn" onmouseleave="hideDropdown()">About Us</a>
+                <div class="dropdown-content" onmouseleave="hideDropdown()">
+                    <a href="\skill\skill.html">Skills</a>
+                    <a href="\Achievements\Achivments.html">Achievements</a>
+                </div>
+            </li>
+            <li><a href="\contact\contact.html">Contact</a></li>
+        </ul>
+        <button class="signup-button" onclick="showLoginPopup()">Sign Up</button>
+
+        <ul id="nav-menu-btn">
+            <li><button id="menu-btn"><img src="\menu.png" alt="menu"  class="menu-open-btn"></button></li>
+        </ul>
+
+        <ul id="nav-menu-mobile">
+            <ul id="nav-menu-btn" class="menu-close-btn">
+                <li><button id="menu-close-btn">X</button></li>
+            </ul>
+            <div class="logo-mobile">
+                <img src="https://th.bing.com/th/id/OIG.bP0PjaSMKoFfpf2rxhc.?pid=ImgGn" alt="Logo">
+                <h1 style="display: inline-block;color: black;">Learnify</h1>
+            </div>
+            <li><a href="\home\home.html">Home</a></li>
+            <li><a href="\Demo\demo.html">Demo</a></li>
+            <li><a href="\Testimonial\review.html"> Testimonials</a></li>
+            <li class="dropdown" onmouseover="showDropdown()">
+                <a href="#" class="dropbtn" onmouseleave="hideDropdown()">About Us</a>
+                <div class="dropdown-content-mobile" onmouseleave="hideDropdown()">
+                    <a href="\skill\skill.html">Skills</a>
+                    <a href="\Achievements\Achivments.html">Achievements</a>
+                </div>
+            </li>
+            <li><a href="\contact\contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+
+        <div class="main-content">
+            <h2>Welcome to Tarang Sir's Educational Website</h2>
+            <p>This is a platform dedicated to providing high-quality education and learning resources. Our mission is
+                to
+                empower individuals through education and help them achieve their goals.</p>
+            <p>Explore our courses, read testimonials from satisfied learners, and discover more about our achievements
+                in
+                the field of education.</p>
+            <p>Feel free to contact us for any inquiries or further information. We are here to support your educational
+                journey!</p>
+        </div>
+
+        <div class="popup" id="loginPopup">
+            <div class="popup-content">
+                <span class="close-btn" onclick="closeLoginPopup()">X</span>
+                <h2>Login</h2>
+                <form>
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                    <a href="Sign up.html">Do you want to Sign in!</a>
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+        </div>
+        
+        <img class="right-image" src="BCI.jpg" alt="Right Image">
+
+        <div class="notes-section">
+            <h3>Notes Section</h3>
+            <p>Explore our notes section for valuable educational content. Whether you're a student, educator, or
+                lifelong
+                learner, our curated collection covers a diverse range of subjects to enhance your knowledge. Click the
+                link
+                below to open the notes section in a new tab and embark on a journey of continuous learning.</p>
+            <div class="dropdown">
+                <a href="#" target="_blank">Explore Notes</a>
+                <div class="dropdown-content">
+                    <a href="Semiconductor.pdf" target="_blank">Semiconductor</a>
+                    <a href="Projectile.pdf" target="_blank">Projectile</a>
+                    <a href="RiverBoatProblem.pdf" target="_blank">RiverBoatProblem</a>
+                </div>
+            </div>
+        </div>
+
+
+
+    <div id="extra">
+        <p>Unlock your potential with our diverse range of interactive courses. Engage in transformative learning experiences tailored to your needs. Elevate your education journey today!</p>
+    </div>
+
+    <div class="footer">
+        <div class="social-media">
+            <a href="#" target="_blank"><img src="/FB.png" alt="Facebook"></a>
+            <a href="#" target="_blank"><img src="/Twitter.jpg" alt="Twitter"></a>
+            <a href="#" target="_blank"><img src="/Linkedin.jpg" alt="LinkedIn"></a>
+        </div>
+        <div class="footer-links">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Courses</a></li>
+                <li><a href="#">Popular Exams</a></li>
+                <li><a href="#">Classes</a></li>
+            </ul>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 Learnify</p>
+        </div>
+    </div>
+
+    
+
+    <script src="home.js"></script>
+</body>
+
+</html>

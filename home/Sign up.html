@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Form with Membership</title>
+    <style>
+        body {
+            background-image: url(HomeBG.jpg);
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #formContainer {
+            background-size: cover;
+            background-position: center;
+            flex: 1;
+            display: flex;
+            width: 300;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            width: 600px;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            text-align: center;
+            color: #003BFF;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="number"],
+        input[type="date"],
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            background-color: #3498db;
+            color: #fff;
+            padding: 14px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 18px;
+            width: 100%;
+            box-sizing: border-box;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #2980b9;
+        }
+
+        #amountContainer {
+            display: none;
+            margin-top: 16px;
+            color: #555;
+        }
+
+        #imageContainer {
+            flex: 1;
+            border-radius: 10px;
+            background-image: url(mem.avif);
+            width: 400px;
+            height: 40%;
+            margin: 90px;
+            margin-top: 20px;
+            height: 94%;
+            margin-right: 20px;
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="formContainer">
+        <form id="myForm">
+            <h1>Membership Form</h1>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+
+            <label for="password">Create Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter a password" required>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" onchange="calculateAge()" required>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" min="14" max="25" readonly>
+
+            <label for="membership">Registration Duration:</label>
+            <select id="membership" name="membership" onchange="showAmountInput()">
+                <option value="6 months">6 months</option>
+                <option value="1 year">1 year</option>
+                <option value="2 years">2 years</option>
+            </select>
+
+            <div id="amountContainer">
+                <label for="amount"></label>
+                <span id="amount" name="amount"></span>
+            </div>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <div id="imageContainer">    </div>
+
+    <script>
+        function calculateAge() {
+            var dobInput = document.getElementById('dob');
+            var ageInput = document.getElementById('age');
+
+            var dob = new Date(dobInput.value);
+            var currentDate = new Date();
+
+            var ageDiff = currentDate.getFullYear() - dob.getFullYear();
+
+            // Check if birthday has occurred this year
+            if (
+                currentDate.getMonth() < dob.getMonth() ||
+                (currentDate.getMonth() === dob.getMonth() && currentDate.getDate() < dob.getDate())
+            ) {
+                ageDiff--;
+            }
+
+            ageInput.value = ageDiff;
+        }
+
+        function showAmountInput() {
+            var membershipSelect = document.getElementById("membership");
+            var amountContainer = document.getElementById("amountContainer");
+            var amountSpan = document.getElementById("amount");
+
+            // Set the membership amount based on the selected duration
+            if (membershipSelect.value === "6 months") {
+                amountSpan.textContent = "Registration Amount: ₹5000"; // Set the amount for 6 months
+            } else if (membershipSelect.value === "1 year") {
+                amountSpan.textContent = "Registration Amount:  ₹10000"; // Set the amount for 1 year
+            } else if (membershipSelect.value === "2 years") {
+                amountSpan.textContent = "Regsitration Amount:  ₹15000"; // Set the amount for 2 years
+            }
+
+            amountContainer.style.display = "block";
+        }
+
+        document.getElementById("myForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            var formData = {
+                name: document.getElementById("name").value,
+                email: document.getElementById("email").value,
+                password: document.getElementById("password").value,
+                dob: document.getElementById("dob").value,
+                age: document.getElementById("age").value,
+                membership: document.getElementById("membership").value,
+            };
+        });
+    </script>
+
+</body>
+</html>
