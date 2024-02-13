@@ -1,4 +1,6 @@
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -42,7 +44,6 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
 }
 
 
@@ -247,7 +248,7 @@ label {
 }
 
 input {
-    width: 100%;
+    /* width: 100%; */
     padding: 10px;
     box-sizing: border-box;
     border: 1px solid #ccc;
@@ -282,7 +283,7 @@ button:hover {
     border-radius: 5px;
     min-width: 10px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    
+    z-index: 1;
 }
 
 
@@ -291,7 +292,6 @@ button:hover {
     padding: 12px 10px;
     text-decoration: none;
     display: block;
-    z-index: 5;
 }
 
 .dropdown-content a:hover {
@@ -326,7 +326,7 @@ button:hover {
     display: block;
 }
 
-@media screen and (width<1000px) {
+@media screen and (max-width: 1000px) {
     #nav-menu {
         display: none;
     }
@@ -334,9 +334,11 @@ button:hover {
     #nav-menu-btn {
         display: inline;
     }
+
     nav h1{
         font-size: 26px;
     }
+
     .menu-open-btn{
         margin-left: 5px;
         margin-top: 4px;
@@ -351,280 +353,5 @@ button:hover {
         height: auto;
         border-radius: 40%;
     }
-}
-
-.contact {
-    /* border: 2px solid black; */
-    text-align: center;
-    padding-bottom: 30px;
-    font-weight: 600;
-    font-size: 4rem;
-    color: #007BFF;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-shadow: 1px 1px 1px #333;
-    margin: 30px 0px;
-}
-
-.info {
-    /* border: 2px dotted black; */
-    /* border-radius: 40px; */
-    height: 70vh;
-    ;
-    display: flex;
-    background-color: white;
-    width: 80vw;
-    margin-left: 10vw;
-    box-shadow: 1px 1px 10px #0056b3;
-}
-
-.info-text {
-    /* border: 2px solid black; */
-    width: 50%;
-    height: 100%;
-}
-
-
-.info-heading {
-    width: 100%;
-    height: 20%;
-    color: #007BFF;
-    font-size: 2.45rem;
-    text-align: center;
-    font-weight: 500;
-    padding-top: 4%;
-    line-height: 50px;
-    margin-bottom: 5vh;
-    /* border: 2px solid black; */
-
-}
-
-.contact-info {
-    /* border: 2px solid black; */
-    text-align: center;
-    font-size: 1rem;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    height: 80%;
-    /* padding-top: 15vh; */
-    width: 100%;
-}
-
-.info-form {
-    /* border: 2px solid black; */
-    width: 50%;
-    height: 100%;
-    background-color: #007BFF;
-}
-
-.info-form p {
-    margin-top: 5vh;
-    /* border: 2px solid white; */
-    color: white;
-    font-size: 2rem;
-    font-weight: 550;
-    letter-spacing: 0.9px;
-    padding-left: 3vw;
-}
-
-.classform {
-    /* border: 2px solid black; */
-    height: 80%;
-}
-
-.classform form {
-    display: inline-block;
-    padding-top: 5vh;
-}
-
-.classform input {
-    margin-top: 10px;
-    margin-left: 3vw;
-    height: 6vh;
-    width: 15vw;
-    border: none;
-    outline: none;
-    border-bottom: 2px solid white;
-    background: none;
-}
-
-input::placeholder {
-    color: #fff;
-    font-size: 1.2rem;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-weight: 400;
-}
-
-h4 {
-    text-align: center;
-    padding-top: 5px;
-    color: #fff;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-
-#mobile,
-#email {
-    margin-top: 5vh;
-}
-
-#button {
-    margin-left: 12vw;
-    background-color: #fff;
-}
-
-textarea {
-    width: 30vw;
-    height: 10vh;
-    margin-left: 5.4vw;
-    background: none;
-    border: none;
-    border-bottom: 2px solid white;
-
-}
-
-textarea::-webkit-scrollbar {
-    width: 1em;
-}
-
-textarea::-webkit-scrollbar-thumb {
-    background-color: rgba(194, 194, 194, 0.712);
-}
-
-#off {
-    margin-top: 5%;
-    text-align: center;
-    font-size: 45px;
-    font-weight: 500;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #007BFF;
-    margin-bottom: 0px;
-    text-shadow: 1px 1px 1px#333;
-
-}
-
-.map {
-    /* border: 2px solid black; */
-    height: 350px;
-
-}
-
-.scroll-container {
-    overflow: hidden;
-    z-index: 0;
-}
-
-.scroll-content {
-    white-space: nowrap;
-    width: max-content;
-    animation: marquee 10s linear infinite;
-    z-index: 0;
-
-}
-
-.scroll-content span {
-    color: red;
-    text-shadow: 5px 5px 50px red;
-    font-size: 1.1rem;
-    font-weight: 400;
-    padding: 0 150px;
-
-
-}
-
-@keyframes marquee {
-    form {
-        transform: translateX(0%);
-        float: right;
-    }
-
-    to {
-        transform: translateX(-50%);
-    }
-}
-
-@media screen and (max-width:900px) {
-    .contact-info {
-        font-size: 1rem;
-    }
-
-    .infotext h2 {
-        font-size: 2.5rem;
-    }
-
-    .profile {
-        height: 40vh;
-    }
-}
-
-@media screen and (max-width:620px) {
-    .info {
-        /* display: flex; */
-        flex-direction: column;
-        /* justify-content: center; */
-        /* align-items: center; */
-        height: 150vh;
-        ;
-        width: 100vw;
-        margin: 0px;
-    }
-
-    .info-text {
-        /* border: 2px solid black;  */
-        width: 100%;
-        justify-content: center;
-    }
-
-    .info-form {
-        width: 100%;
-    }
-
-    .contact-info {
-        font-size: 1.2rem;
-    }
-
-    .infotext h2 {
-        font-size: 1.2rem;
-        text-align: center;
-        /* color: red; */
-        margin-bottom: 0px;
-        /* border: 2px solid black;  */
-    }
-
-    .profile {
-        width: 30%;
-        height: 25vh;
-        /* border: 2px solid black;   */
-        margin-bottom: 0px;
-    }
-
-
-    .profile img {
-        width: 100%;
-        height: 100%;
-        border-radius: 30%;
-        /* border: 2px solid black;   */
-
-    }
-
-    .info-heading {
-        line-height: 90px;
-    }
-
-    .classform input {
-        width: 45vw;
-
-    }
-
-    textarea {
-        width: 88vw;
-    }
-
-    #button {
-        margin-left: 27vw;
-    }
-}
-
-@media screen and (max-width:365px) {
-    .info-heading {
-        line-height: 50px;
-    }
+    
 }

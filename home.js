@@ -9,7 +9,7 @@ document.getElementById("menu-close-btn").onclick = () => {
 
 
 function showLoginPopup() {
-    document.getElementById("loginPopup").style.display = "flex";
+  window.location.href='../Registrastion Form/Login.html';        
 }
 
 function closeLoginPopup() {

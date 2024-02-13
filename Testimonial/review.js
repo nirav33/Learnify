@@ -9,6 +9,9 @@ function showDropdown() {
     var dropdownContent = document.querySelector('.dropdown-content');
     dropdownContent.style.display = 'block';
 }
+function showLoginPopup() {
+    window.location.href='../Registrastion Form/Login.html';        
+  }
 
 function hideDropdown() {
     var dropdownContent = document.querySelector('.dropdown-content');

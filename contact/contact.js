@@ -6,7 +6,9 @@ document.getElementById("menu-close-btn").onclick = () => {
   document.getElementById("nav-menu-mobile").style.display = "none";
 };
 
-
+function showLoginPopup() {
+  window.location.href='../Registrastion Form/Login.html';        
+}
 
 function initMap() {
   // Replace these coordinates with the actual coordinates of SVNIT Surat

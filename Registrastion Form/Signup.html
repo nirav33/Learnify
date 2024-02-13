@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learnify-Registrastion</title>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="register.css">
+</head>
+
+<body>
+
+    <body background="Bkg.jpg">
+
+        <nav>
+            <div class="logo">
+                <img src="\HomeLogo.png" alt="Logo">
+            </div>
+            <h1>Learnify</h1>
+            <ul id="nav-menu">  
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="\Demo\demo.html">Demo</a></li>
+                <li><a href="\Testimonial\review.html"> Testimonials</a></li>
+                <li class="dropdown" onmouseover="showDropdown()">
+                    <a href="#" class="dropbtn" onmouseleave="hideDropdown()">About Us</a>
+                    <div class="dropdown-content" onmouseleave="hideDropdown()">
+                        <a href="\skill\skill.html">Skills</a>
+                        <a href="\Achievements\Achivments.html">Achievements</a>
+                    </div>
+                </li>
+                <li><a href="\contact\contact.html">Contact</a></li>
+            </ul>
+            <button class="signup-button" onclick="showLoginPopup()">Sign Up</button>
+    
+            <ul id="nav-menu-btn">
+                <li><button id="menu-btn"><img src="\menu.png" alt="menu"  class="menu-open-btn"></button></li>
+            </ul>
+    
+            <ul id="nav-menu-mobile">
+                <ul id="nav-menu-btn" class="menu-close-btn">
+                    <li><button id="menu-close-btn">X</button></li>
+                </ul>
+                <div class="logo-mobile">
+                    <img src="\HomeLogo.png" alt="Logo">
+                    <h1 style="display: inline-block;color: black;">Learnify</h1>
+                </div>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="\Demo\demo.html">Demo</a></li>
+                <li><a href="\Testimonial\review.html"> Testimonials</a></li>
+                <li class="dropdown" onmouseover="showDropdown()">
+                    <a href="#" class="dropbtn" onmouseleave="hideDropdown()">About Us</a>
+                    <div class="dropdown-content-mobile" onmouseleave="hideDropdown()">
+                        <a href="\skill\skill.html">Skills</a>
+                        <a href="\Achievements\Achivments.html">Achievements</a>
+                    </div>
+                </li>
+                <li><a href="\contact\contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    
+    
+    <div id="page" class="site login-show">
+        <div class="container">
+            <div class="wrap">
+                <div class="signup">
+                    <div class="content-heading">
+                        <div class="y-style">
+                            <div class="logo"><a href="#">Learn<span>ify</span></a></div>
+                            <div class="welcome">
+                                <h2>Sign Up<br>Now! <br></h2>
+                                <p>Here you can login or register</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-form">
+                        <div class="y-style">
+                            <form action="">
+                                <p>
+                                    <label for="">Your Name</label>
+                                    <input type="text" placeholder="Enter Name">
+                                </p>    
+                                <p>
+                                    <label for="">Email</label>
+                                    <input type="Email" placeholder="Enter Email">
+                                </p>
+                                <p>
+                                    <label for="">Password</label>
+                                    <input type="password" placeholder="Enter Password">
+                                </p>
+                                <p class="check">
+                                    <input type="checkbox" id="terms">
+                                    <label for="terms">I agree to terms and conditions</label>
+                                </p>
+                                <p class="forgot"><a href="#">Forgot Password</a></p>
+                                <p><button type="submit">Sign Up</button></p>
+                            </form>
+                            <div class="social">
+                                <p><span>Or Sign Up With...</span></p>
+                                <ul>
+                                    <li><a href="#" class="google"><ion-icon name="logo-google"></ion-icon></a></li>
+                                    <li><a href="#" class="facebook"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                                    <li><a href="#" class="twitter"><ion-icon name="logo-twitter"></ion-icon></a></li>
+                                </ul>
+                            </div>
+                            <div class="afterform">
+                                <p>Already have an Account?</p>
+                                <a href="Login.html" class="t-login">Login Here</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <script src="register.js"></script>
+</body>
+
+</html>
