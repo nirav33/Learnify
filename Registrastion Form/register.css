@@ -152,6 +152,7 @@ form :is(p,label) a:hover .afterform  a:hover{
 .content-form::before{
     content: '';
     position: absolute;
+    left: -5%;
     width: 200%;
     height: 200%;
     background-color: #fff;
@@ -222,12 +223,15 @@ form :is(p,label) a:hover .afterform  a:hover{
 }
 
 .social .google{
+    margin-inline: 15px;
     color: #db4437;
 }
 .social .facebook{
+    margin-inline: 15px;
     color: #4267b2;
 }
 .social .twitter{
+    margin-inline: 15px;
     color: #1da1f2;
 }
 
@@ -260,4 +264,20 @@ form :is(p,label) a:hover .afterform  a:hover{
         margin: 5em 0 auto;
     }
     
+}
+@media screen and (width<500px) {
+    .content-form::before{
+        content: '';
+        position: absolute;
+        left: -50%;
+        width: 200%;
+        height: 100%;
+        background-color: #fff;
+        border-radius: 60% 60% 0 0;
+        z-index: 0;
+        transform: translate3d(-27% -21% 0);
+        -webkit-transform: translate3d(-27% -21% 0);
+        animation:fade-in 0.7s cubic-bezier(0.39,0.575,0.565,1) both;
+        -webkit-animation:fad-in 0.7s cubic-bezier(0.39,0.575,0.565,1) both;
+    }
 }
