@@ -8,53 +8,54 @@
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> -->
     <link rel="stylesheet" href="contact.css">
 </head>
-<body>
+
+<body background="../HomeBG.jpg">
+
     <nav>
         <div class="logo">
-            <img src="HomeLogo.png" alt="Logo">
+            <img src="../HomeLogo.png" alt="Logo">
         </div>
         <h1>Learnify</h1>
-        <ul id="nav-menu">
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="\Demo\demo.html">Demo</a></li>
-            <li><a href="\Testimonial\review.html"> Testimonials</a></li>
+        <ul id="nav-menu">  
+            <li><a href="../">Home</a></li>
+            <li><a href="../Demo/">Demo</a></li>
+            <li><a href="../Testimonial/"> Testimonials</a></li>
             <li class="dropdown" onmouseover="showDropdown()">
                 <a href="#" class="dropbtn" onmouseleave="hideDropdown()">About Us</a>
                 <div class="dropdown-content" onmouseleave="hideDropdown()">
-                    <a href="\skill\skill.html">Skills</a>
-                    <a href="\Achievements\Achivments.html">Achievements</a>
+                    <a href="../skill/">Skills</a>
+                    <a href="../Achievements/">Achievements</a>
                 </div>
             </li>
-            <li><a href="\contact\contact.html">Contact</a></li>
+            <li><a href="index.html">Contact</a></li>
         </ul>
-        <button class="signup-button" onclick="showLoginPopup()">Sign Up</button>
+        <button class="signup-button" onclick="showLoginPopup()">Sign In</button>
 
         <ul id="nav-menu-btn">
-            <li><button id="menu-btn">=</button></li>
+            <li><button id="menu-btn"><img src="../menu.png" alt="menu"  class="menu-open-btn"></button></li>
         </ul>
-        
+
         <ul id="nav-menu-mobile">
             <ul id="nav-menu-btn" class="menu-close-btn">
-                <li><button id="menu-close-btn" >X</button></li>
+                <li><button id="menu-close-btn">X</button></li>
             </ul>
             <div class="logo-mobile">
-                <img src="HomeLogo.png" alt="Logo">
+                <img src="../HomeLogo.png" alt="Logo">
                 <h1 style="display: inline-block;color: black;">Learnify</h1>
             </div>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="\Demo\demo.html">Demo</a></li>
-            <li><a href="\Testimonial\review.html"> Testimonials</a></li>
+            <li><a href="../">Home</a></li>
+            <li><a href="../Demo/">Demo</a></li>
+            <li><a href="../Testimonial"> Testimonials</a></li>
             <li class="dropdown" onmouseover="showDropdown()">
                 <a href="#" class="dropbtn" onmouseleave="hideDropdown()">About Us</a>
-                <div class="dropdown-content" onmouseleave="hideDropdown()">
-                    <a href="\skill\skill.html">Skills</a>
-                    <a href="\Achievements\Achivments.html">Achievements</a>
+                <div class="dropdown-content-mobile" onmouseleave="hideDropdown()">
+                    <a href="../skill/">Skills</a>
+                    <a href="../Achievements/">Achievements</a>
                 </div>
             </li>
-            <li><a href="\contact\contact.html">Contact</a></li>
+            <li><a href="index.html">Contact</a></li>
         </ul>
     </nav>
-    <!-- <marquee behavior="sliding" direction="left" class="scrolling-text" scrollamount="15" >CONTACT ME HERE IF WILLING TO WORK WITH ME AT ANY LEVEL.</marquee> -->
 
     <div class="scroll-container">
         <div class="scroll-content" id="marqueeContent">
