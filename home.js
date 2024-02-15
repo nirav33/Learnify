@@ -9,7 +9,7 @@ document.getElementById("menu-close-btn").onclick = () => {
 
 
 function showLoginPopup() {
-  window.location.href='../Registrastion Form/Login.html';        
+  window.location.href='Registrastion Form/Login.html';        
 }
 
 function closeLoginPopup() {
