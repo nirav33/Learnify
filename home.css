@@ -614,3 +614,9 @@ button:hover {
     }
     
 }
+
+@media screen and (max-width:400px) {
+    .notes-section{
+        margin-top: 100%;
+    }
+}
